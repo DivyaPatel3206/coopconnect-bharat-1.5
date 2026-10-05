@@ -1,0 +1,4 @@
+Training Policy (demo content - replace with the official NCCT document)
+kind: Policy
+Training programmes are delivered through VAMNICOM, Regional Institutes of Cooperative Management (RICMs) and Institutes of Cooperative Management (ICMs) under the National Council for Cooperative Training. Registration is completed on CoopConnect and confirmed by the institution. Participants should attend the required share of sessions to be eligible for a certificate. Attendance is recorded through QR check-in or manually by the trainer.
+Certificates are issued digitally after a course reaches 100 percent progress. Every certificate carries a verification ID that anyone can check on the Verify Certificate page. A certificate is a record of training completed. It is not a government appointment or an official eligibility decision.

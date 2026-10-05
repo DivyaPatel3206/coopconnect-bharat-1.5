@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      # Swap to Postgres for a closer-to-production setup:
+      # DATABASE_URL: postgresql://coop:coop@db:5432/coopconnect
+      DATABASE_URL: sqlite:///./coopconnect.db
+      SECRET_KEY: change-me-in-production
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    depends_on:
+      - backend
+
+  # Optional: uncomment to run Postgres instead of the default SQLite file.
+  # db:
+  #   image: postgres:16
+  #   environment:
+  #     POSTGRES_USER: coop
+  #     POSTGRES_PASSWORD: coop
+  #     POSTGRES_DB: coopconnect
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - pgdata:/var/lib/postgresql/data
+
+# volumes:
+#   pgdata:
